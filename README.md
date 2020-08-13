@@ -1,2 +1,3 @@
-# skeleton-js-node
-NodeJS template structure
+# skeleton-js-express
+
+NodeJS Express API structure

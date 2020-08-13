@@ -1,0 +1,31 @@
+{
+  "name": "skeleton-js-express",
+  "version": "1.0.0",
+  "description": "NodeJS Express Skeleton",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@webinmove/kosa": "^1.0.0",
+    "config": "^3.3.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.0.0",
+    "lodash": "^4.17.19",
+    "nodemon": "^2.0.4",
+    "os": "^0.1.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./src/index.js",
+    "watch": "nodemon --exec npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:wavyx/skeleton-js-express.git"
+  },
+  "author": "Eric Rodriguez",
+  "homepage": "https://github.com/wavyx"
+}

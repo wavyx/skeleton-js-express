@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  api:
+    container_name: api
+    build:
+      context: .
+      args:
+        - BUILD_NUMBER_CI
+    command: npm run watch
+    environment:
+      APP_PORT: ${APP_PORT}
+      LOG_LEVEL: ${LOG_LEVEL}
+      NODE_ENV: ${NODE_ENV}
+    ports:
+      - '${APP_PORT}:${APP_PORT}'
+    volumes:
+      - ./config:/var/www/config
+      - ./src:/var/www/src
+      - ./test:/var/www/test
+      - ./package.json:/var/www/package.json
+      - ./package-lock.json:/var/www/package-lock.json
+    networks:
+      - network-api
+
+networks:
+  network-api:
+    name: network-api
+    ipam:
+      config:
+        - subnet: 172.16.0.0/24
